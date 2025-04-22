@@ -9,6 +9,12 @@
 - types of agent
 - agent control / action space
 - agent observation
+    - lidar (271,)
+    - all (lidar + rgb + depth + semantic)
+        - image (1080, 1920, 3, 3)
+        - state (271,)
+        - depth (640, 640, 1, 3)
+        - semantic (640, 640, 3, 3)
 
 ## Subtitle 3
 - Bullet point 1

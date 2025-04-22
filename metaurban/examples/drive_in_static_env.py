@@ -101,7 +101,9 @@ if __name__ == "__main__":
         for i in range(1, 1000000000):
 
             o, r, tm, tc, info = env.step([0., 0.0])  ### reset; get next -> empty -> have multiple end points
-
+            print(type(o))
+            for k,v in o.items():
+                print(k, v.shape)
             if (tm or tc):
                 env.reset(((env.current_seed + 1) % config['num_scenarios']) + env.engine.global_config['start_seed'])
     finally:
