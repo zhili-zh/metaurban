@@ -259,7 +259,9 @@ if __name__ == "__main__":
             o, r, tm, tc, info = env.step(action)  ### reset; get next -> empty -> have multiple end points
 
             action = expert.predict(torch.from_numpy(o).reshape(1, 271))[0]  #.detach().numpy()
+            # print("Before", action)
             action = np.clip(action, a_min=-1, a_max=1.)
+            # print("After", action)
             action = action[0].tolist()
             
             if args.save_img and scenario_t >= start_t:
