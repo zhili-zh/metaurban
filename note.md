@@ -3,7 +3,6 @@
 ## Environment
 - static or dynamic environment
 - how to create or change environment setting?
-- Bullet point 3
 
 ## agent definition
 - types of agent
